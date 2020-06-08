@@ -88,14 +88,14 @@ registerMicroApps(
     },
   ],
   {
-    beforeLoad(microApp) {
+    beforeLoad() {
       NProgress.start();
-      console.log('before load', microApp.name);
+      // console.log('before load', microApp.name);
       return Promise.resolve();
     },
-    afterMount(microApp) {
+    afterMount() {
       NProgress.done();
-      console.log('after mount', microApp.name);
+      // console.log('after mount', microApp.name);
       return Promise.resolve();
     },
   },
